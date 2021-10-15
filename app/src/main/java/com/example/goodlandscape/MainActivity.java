@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
                 Runnable r=new Runnable() {
                     public void run() {
                         text.setText(QUESTIONS.get(index));
+                        answer.setText(null);
                     }
                 };
                 handler.postDelayed(r, 2000);
@@ -105,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
                 Runnable r=new Runnable() {
                     public void run() {
                         text.setText(QUESTIONS.get(index));
+                        answer.setText(null);
                     }
                 };
                 handler.postDelayed(r, 2000);
