@@ -1,6 +1,7 @@
 package com.example.goodlandscape;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -80,7 +81,13 @@ public class MainActivity extends AppCompatActivity {
                 if(index == 10){
                     index = 0;
                 }
-                text.setText(QUESTIONS.get(index));
+                Handler handler=new Handler();
+                Runnable r=new Runnable() {
+                    public void run() {
+                        text.setText(QUESTIONS.get(index));
+                    }
+                };
+                handler.postDelayed(r, 2000);
             }
         });
         tru.setOnClickListener(new View.OnClickListener(){
@@ -94,7 +101,13 @@ public class MainActivity extends AppCompatActivity {
                 if(index == 10){
                     index = 0;
                 }
-                text.setText(QUESTIONS.get(index));
+                Handler handler=new Handler();
+                Runnable r=new Runnable() {
+                    public void run() {
+                        text.setText(QUESTIONS.get(index));
+                    }
+                };
+                handler.postDelayed(r, 2000);
             }
         });
     }
